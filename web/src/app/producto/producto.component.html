@@ -1,0 +1,13 @@
+<div class="contenedorProducto">
+    <div class="contenedorProducto__titulo">
+        <h2>Productos</h2>
+    </div>
+    <div class="contenedorProducto__listado">
+        <ul *ngIf="lstProductos.length>0; else empty">
+            <li *ngFor="let producto of lstProductos">
+              <span>Nombre: {{ producto.nombre }} - Cantidad: {{ producto.cantidad }} - Valor: ${{ producto.valor }}</span>
+            </li>
+        </ul>
+        <ng-template #empty> <i>No hay productos</i> </ng-template>
+    </div>
+</div>

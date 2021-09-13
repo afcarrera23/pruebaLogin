@@ -1,0 +1,19 @@
+<div class="login">
+    <form class="custom-form" autocomplete="off" [formGroup]="form" (ngSubmit)="login()">
+      <h1>Login</h1>
+      <input
+        type="text"
+        formControlName="userName"
+        placeholder="Usuario"
+        required="required"
+      />
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="password"
+        required="required"
+      
+      />
+      <button type="submit">Log in</button>
+    </form>
+  </div>

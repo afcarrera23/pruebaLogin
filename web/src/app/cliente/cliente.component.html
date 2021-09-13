@@ -1,0 +1,13 @@
+<div class="contenedorCliente">
+    <div class="contenedorCliente__titulo">
+        <h2>Clientes</h2>
+    </div>
+    <div class="contenedorCliente__listado">
+        <ul *ngIf="lstClientes.length>0; else empty">
+            <li *ngFor="let cliente of lstClientes">
+              <span>{{ cliente.nombreCliente }}</span>
+            </li>
+        </ul>
+        <ng-template #empty> <i>No hay clientes</i> </ng-template>
+    </div>
+</div>
